@@ -265,12 +265,12 @@ for entryVec in sF: # every source file
 			) # returns a list of tuple pairs (parent node, childNode[n])
 		) # connects everything to the main source/parent node
 	nxList.append(G)
-	break # just do it once!
 
-nx.draw(nxList[0])
-
-plt.draw()
-plt.show()
+for graph in nxList:
+	nx.draw(graph)
+	plt.draw()
+	plt.show()
+	break # there will be hundreds of these, will add a way to store png's but for now just break after 1
 
 # nodes --> dots
 # edges --> connections
